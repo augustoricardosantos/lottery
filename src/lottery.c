@@ -2,6 +2,8 @@
 #include <stdlib.h>
 
 #define LUCKY_NUMBER 7
+#define MAX_WHITE_BALL 59
+#define MAX_POWER_BALL 39
 
 int calculate_result(int white_balls[5], int power_ball)
 {
@@ -10,7 +12,7 @@ int calculate_result(int white_balls[5], int power_ball)
     {
         if (
              (white_balls[i] < 1)
-             || (white_balls[i] > 59)
+             || (white_balls[i] > MAX_WHITE_BALL)
            )
         {
             return -1;
@@ -19,7 +21,7 @@ int calculate_result(int white_balls[5], int power_ball)
 
     if (
          (power_ball < 1)
-         || (power_ball > 39)
+         || (power_ball > MAX_POWER_BALL)
        )
     {
         return -1;

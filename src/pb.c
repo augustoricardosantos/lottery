@@ -108,6 +108,7 @@ int main(int argc, char** argv)
 
     printf("%d percent chance of winning\n", result);
 
+    // lottery ball numbers are always shown sorted
     qsort(white_balls, 5, sizeof(int), my_sort_func);
 
     return 0;

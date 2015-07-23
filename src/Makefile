@@ -7,4 +7,4 @@ pb.o: pb.c
 	gcc -std=c99 -Wall -Wextra -Werror -c pb.c
 
 clean:
-	rm pb.o pb output.txt
+	rm pb.o output.txt

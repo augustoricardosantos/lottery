@@ -29,7 +29,6 @@ static int my_sort_func(const void* p1, const void* p2)
 int calculate_result(int white_balls[5], int power_ball)
 {
     for (int i=0; i<5; i++)
-             return -1;
     {
         if (
              (white_balls[i] < 1)
@@ -47,6 +46,8 @@ int calculate_result(int white_balls[5], int power_ball)
     {
         return -1;
     }
+
+    qsort(white_balls, 5, sizeof(int), my_sort_func);
 
     return 0;
 }
@@ -114,7 +115,6 @@ int main(int argc, char** argv)
     printf("%d percent chance of winning\n", result);
 
     // lottery ball numbers are always shown sorted
-    qsort(white_balls, 5, sizeof(int), my_sort_func);
 
     return 0;
 
